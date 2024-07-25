@@ -5,9 +5,9 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="px-3 py-12">
         <div class="mx-auto space-y-6 max-w-7xl sm:px-6 lg:px-8">
-            <div class="p-4 bg-white shadow sm:p-8 dark:bg-gray-800 sm:rounded-lg">
+            <div class="p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800">
                 <div class="max-w-xl mx-auto">
                     <section>
                         <form method="post" action="{{ route('posts.update', $post) }}" class="mt-6 space-y-6">

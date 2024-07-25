@@ -12,12 +12,12 @@
         </div>
     </x-slot>
 
-    <div class="py-12">
+    <div class="px-3 py-12">
         <div class="flex flex-col gap-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
             @session('updated')
                 <x-alert type="check">{{ $value }}</x-alert>
             @endsession
-            <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
+            <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="flex items-center gap-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 -scale-x-100"

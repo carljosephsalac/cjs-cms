@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index() : View
     {
-        $posts = Post::with('user')->latest()->simplePaginate(4);
+        $posts = Post::with('user')->latest()->simplePaginate(5);
 
         return view('posts.index', compact('posts'));
     }
