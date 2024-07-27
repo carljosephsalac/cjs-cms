@@ -20,4 +20,16 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('posts', PostController::class)->middleware(['auth', 'verified']);
+// Route::resource('posts', PostController::class)->middleware(['auth', 'verified']);
+
+Route::controller(PostController::class)->group(function() {
+    Route::middleware(['auth', 'verified'])->group(function() {
+        Route::get('/posts', 'index')->name('posts.index');
+        Route::get('/posts/create', 'create')->name('posts.create');
+        Route::post('/posts', 'store')->name('posts.store');
+        Route::get('/posts/{post}/edit', 'edit')->name('posts.edit')->can('edit-post', 'post');
+        Route::get('/posts/{post}', 'show')->name('posts.show');
+        Route::patch('/posts/{post}', 'update')->name('posts.update');
+        Route::delete('/posts/{post}', 'destroy')->name('posts.destroy');
+    });
+});
