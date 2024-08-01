@@ -7,12 +7,12 @@
 
     <div class="px-3 py-12">
         <div class="mx-auto space-y-6 max-w-7xl sm:px-6 lg:px-8">
-            <div class="p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800">
-                <div class="max-w-xl mx-auto">
+            <div class="max-w-xl p-4 mx-auto bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800">
+                <div class="w-full">
                     <section>
-                        <form method="post" action="{{ route('posts.store') }}" class="mt-6 space-y-6">
+                        <form method="post" action="{{ route('posts.store') }}" class="flex flex-col gap-6">
                             @csrf
-                            <div>
+                            <div class="max-w-xl">
                                 <x-input-label for="title" :value="__('Title')" />
                                 <x-text-input id="title" name="title" type="text" class="block w-full mt-1"
                                     :value="old('title')" required autofocus autocomplete="title" />

@@ -69,7 +69,13 @@ class PostController extends Controller
             'content' => 'required|min:3'
         ]);
 
+        $oldUpdateAt = $post->updated_at;
+
         $post->update($validated);
+
+        if ($oldUpdateAt->is($post->updated_at)) {
+            return redirect()->route('posts.show', $post);
+        }
 
         return redirect()->route('posts.show', $post)->with('updated', 'Updated Successfully');
     }
