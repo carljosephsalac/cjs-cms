@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <strong>{{ $post->title }}</strong>
-                    <p class="mt-3">{{ $post->content }}</p>
+                    <div class="mt-3">{!! $post->content !!}</div>
                     @if ($post->user->is(auth()->user()))
                         <div class="flex justify-between mt-3">
                             <x-primary-button type="link"
