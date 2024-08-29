@@ -19,11 +19,12 @@
 <body class="font-sans antialiased text-gray-900 ">
     <div class="flex flex-col items-center justify-center min-h-screen px-5 pt-6 bg-gray-100 sm:pt-0 dark:bg-gray-900">
         <div>
-            {{-- <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
-            </a> --}}
-            <a href="/">
+            <a href="/" class="dark:hidden">
                 <img src="{{ Vite::asset('resources/images/cms.png') }}" alt="CMS"
+                    class="w-20 h-20 text-gray-500 fill-current">
+            </a>
+            <a href="/" class="hidden dark:inline">
+                <img src="{{ Vite::asset('resources/images/cms-gray.png') }}" alt="CMS"
                     class="w-20 h-20 text-gray-500 fill-current">
             </a>
         </div>

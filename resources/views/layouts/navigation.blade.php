@@ -5,9 +5,12 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex items-center shrink-0">
-                    <a href="{{ route('posts.index') }}">
-                        {{-- <x-application-logo class="block w-auto text-gray-800 fill-current h-9 dark:text-gray-200" /> --}}
+                    <a href="{{ route('posts.index') }}" class="dark:hidden">
                         <img src="{{ Vite::asset('resources/images/cms.png') }}" alt="CMS"
+                            class="block w-auto text-gray-800 fill-current h-9 dark:text-gray-200">
+                    </a>
+                    <a href="{{ route('posts.index') }}" class="hidden dark:inline">
+                        <img src="{{ asset('build/assets/cms-gray-DwoR2fA4.png') }}" alt="CMS"
                             class="block w-auto text-gray-800 fill-current h-9 dark:text-gray-200">
                     </a>
                 </div>

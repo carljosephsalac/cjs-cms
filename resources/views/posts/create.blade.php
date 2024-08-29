@@ -7,12 +7,12 @@
 
     <div class="px-3 py-12">
         <div class="mx-auto space-y-6 max-w-7xl sm:px-6 lg:px-8">
-            <div class="max-w-xl p-4 mx-auto bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800">
+            <div class="p-4 mx-auto bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800">
                 <div class="w-full">
                     <section>
                         <form method="post" action="{{ route('posts.store') }}" class="flex flex-col gap-6">
                             @csrf
-                            <div class="max-w-xl">
+                            <div>
                                 <x-input-label for="title" :value="__('Title')" />
                                 <x-text-input id="title" name="title" type="text" class="block w-full mt-1"
                                     :value="old('title')" required autofocus autocomplete="title" />
@@ -22,7 +22,7 @@
                             <div>
                                 <x-input-label for="content" :value="__('Content')" />
                                 <textarea id="content" name="content" placeholder="{{ __('What\'s on your mind?') }}"
-                                    class="block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('content') }}</textarea>
+                                    class="block w-full border-gray-300 rounded-md shadow-sm dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600">{{ old('content') }}</textarea>
                                 <x-input-error class="mt-2" :messages="$errors->get('content')" />
                             </div>
 

@@ -34,6 +34,18 @@
             {{ $slot }}
         </main>
     </div>
+
+    <script>
+        function autoExpand(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+
+        document.querySelectorAll('textarea').forEach(textarea => {
+            autoExpand(textarea);
+            textarea.addEventListener('input', () => autoExpand(textarea));
+        });
+    </script>
 </body>
 
 </html>

@@ -28,13 +28,13 @@
             <div class="flex flex-wrap justify-center gap-4 mt-8">
                 @if (Route::has('login'))
                     @auth
-                        <x-primary-button type='link' href="{{ route('posts.index') }}">
+                        <x-secondary-button type='link' href="{{ route('posts.index') }}">
                             {{ __('Home') }}
-                        </x-primary-button>
+                        </x-secondary-button>
                     @else
-                        <x-primary-button type='link' href="{{ route('login') }}">
+                        <x-secondary-button type='link' href="{{ route('login') }}">
                             {{ __('Login') }}
-                        </x-primary-button>
+                        </x-secondary-button>
                         @if (Route::has('register'))
                             <x-secondary-button type="link" href="{{ route('register') }}">
                                 {{ __('Register') }}
